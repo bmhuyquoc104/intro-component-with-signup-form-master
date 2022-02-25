@@ -111,7 +111,7 @@ a{
     padding: 1em 1em;
     border: 2px solid whitesmoke;
     border-radius: 5px;
-    color: var(--clr_primary);
+    color: var(--clr_neutral);
     font-weight: var(--fw_s);
 }
 
@@ -188,12 +188,13 @@ input.invalid{
         text-align: left;
         align-self: flex-start;
         line-height:1;
-        padding: 0 1.6em;
+        font-weight: var(--fw_xl);
+        padding: 0 1.4em;
     }
 
     .summary .paragraph{
         font-size: clamp(0.8rem,0.5vh,1.2rem);
-        width: max(120%,200px);
+        width: max(100%,200px);
         align-self: flex-start;
         text-align: left;
         padding: 0 4.1em;
