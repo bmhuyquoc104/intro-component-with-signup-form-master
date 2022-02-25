@@ -1,0 +1,219 @@
+:root{
+    --clr_primary:hsl(0, 100%, 74%) ;
+    --clr_primary2:hsl(154, 59%, 51%) ;
+    --clr_accent: hsl(248, 32%, 49%);
+    --clr_neutral: hsl(249, 10%, 26%);
+    --clr_neutral2: hsl(246, 25%, 77%);
+    --fw_s:400;
+    --fw_m:500;
+    --fw_l:600;
+    --fw_xl:700;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(./images/bg-intro-mobile.png);
+    background-color: var(--clr_primary);
+    
+}
+
+main{
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:"Poppins"
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: max(90%,300px);
+}
+
+.summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.summary h1{
+    color: white;
+    font-weight:var(--fw_l);
+    text-align: center;
+    align-self: center;
+    width: max(90%,200px);
+    font-size:clamp(2rem,6vh,5rem);
+}
+
+.summary .paragraph{
+    color: white;
+    font-weight:var(--fw_m);
+    text-align: center;
+    width: max(90%,100px);
+
+    font-size:clamp(1rem,3vh,2rem);
+}
+
+
+.register{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.ads{
+    margin-top: 2em;
+    background-color:var(--clr_accent);
+    padding: 1em 4em;
+    font-size:clamp(0.8rem,3vh,2rem);
+    text-align: center;
+    width: max(90%,300px);
+    border-radius: 10px;
+    box-shadow: 0 7px 0px 0  hsl(234deg 1% 60%);
+}
+
+.ads a{
+    color: white;
+}
+
+.form{
+    background-color:white;
+    padding: 2em 1.5em;
+    width: max(90%,300px);
+    border-radius: 10px;
+    display: flex;
+    gap: 1.5em;
+    flex-direction: column;
+    box-shadow: 0 7px 0px 0  hsl(234deg 1% 60%);
+
+}
+
+.form input{
+    width: 100%;
+    padding: 1em 1em;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    color: var(--clr_primary);
+    font-weight: var(--fw_s);
+}
+
+.form input::placeholder{
+    color: hsl(249, 10%, 26%);
+    font-weight: var(--fw_l);
+    font-size:clamp(0.8rem,2vh,2rem);
+}
+
+.form button{
+    background-color: var(--clr_primary2);
+    padding: 1em 1em;
+    text-align: center;
+    color:white;
+    text-transform: uppercase;
+    font-size:clamp(0.8rem,2vh,2rem);
+    font-weight: var(--fw_l);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 0px 0  hsl(234deg 1% 60%);
+    cursor: pointer;
+}
+
+.form p{
+    text-align: center;
+    color: var(--clr_neutral2);
+    padding: 0 4em;
+    font-size:clamp(0.6rem,1vh,1rem);
+}
+
+.form a{
+    color: var(--clr_primary);
+    font-weight: var(--fw_xl);
+}
+
+input.invalid{
+    border: 2px solid var(--clr_primary);
+}
+
+
+
+.form p.error{
+    color: var(--clr_primary);
+    padding-top: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    text-align: right;
+    font-weight: var(--fw_m);
+    font-style:italic; 
+    position: relative;
+}
+
+.form p.error.invalid::after{
+    position: absolute;
+    top: -3.6em;
+    left: 27em;
+    content: url(./images/icon-error.svg);
+}
+
+@media (min-width: 768px){
+    .container{
+        margin-top: 0;
+        flex-direction: row;
+        width:80%;
+    }
+
+    .container >*{
+        width: 100%;
+    }
+
+    .summary h1{
+        width: max(100%,200px);
+        text-align: left;
+        align-self: flex-start;
+        line-height:1;
+        padding: 0 1.6em;
+    }
+
+    .summary .paragraph{
+        font-size: clamp(0.8rem,0.5vh,1.2rem);
+        width: max(120%,200px);
+        align-self: flex-start;
+        text-align: left;
+        padding: 0 4.1em;
+    }
+
+    .ads{
+        padding: 1em 2em;
+    }
+
+    .form p.error::after{
+        left: 30em;
+    }
+}
+
+.attribution {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

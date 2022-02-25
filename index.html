@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+
+    <script src ="index.js" defer ></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <article class="summary">
+          <h1 class="title">Learn to code by watching others</h1>
+          <p class="paragraph">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </article>
+
+        <div class ="register">
+          <article class="ads">
+            <a href="#">
+              <strong>Try it free 7 days</strong> then $20/mo. thereafter</a
+            >
+          </article>
+          <form action="/" method="GET" aria-label="Register Form" class="form">
+            <div>
+              <input
+                type="text"
+                name="first__name"
+                id="first-name"
+                placeholder="First Name"
+              />
+              <p class="error"></p>
+            </div>
+  
+            <div>
+              <input
+                type="text"
+                name="last__name"
+                id="last-name"
+                placeholder="Last Name"
+              />
+              <p class="error"></p>
+            </div>
+  
+            <div>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <p class="error"></p>
+            </div>
+  
+            <div>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+              <p class="error"></p>
+            </div>
+  
+            <button id="button" type="submit">Claim your free trial</button>
+            <p>
+              By clicking the button, you are agreeing to our
+              <a href="#">Terms and Services</a>
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Huy Vo</a>.
+      </p>
+    </footer>
+  </body>
+</html>
